@@ -15,7 +15,7 @@ caloudie/
 │
 ├── src/
 │    ├── client/                   # Front-end
-│    |    ├── app/             		 # Main App component
+│    |    ├── app/                 # Main App component
 │    |    ├── assets/              # Fonts, images and miscs
 │    |    ├── e2e/                 # End to end tests
 │    |    ├── enviroments/         # React Router Dom
