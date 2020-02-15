@@ -9,8 +9,6 @@ router.get('/', (req, res) => {
 
 router.get('/food', FoodController.index);
 
-router.post('/food', (req, res) => {
-	return res.status(200).json({ message: 'ok' });
-});
+router.post('/food', FoodController.store);
 
 module.exports = router;
