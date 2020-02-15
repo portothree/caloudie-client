@@ -6,7 +6,7 @@
 
 ## Notes
 
-- The macronutrients carbs, fat and protein are saved in %, so if the user records `100 grams` of chicken breast which has `0% carbs, 21% fat and 79% protein` will be converted to `0g, 3.5g, 29.5g` respectively. `1g of carb = 4 kcal` , `1g of fat = 9 kcal`, `1g of protein = 4 kcal` and `0 + 31.5 + 118` we consume `149.5 kcal` for every 100g of chicken breast.
+- The macronutrients carbs, fat and protein are saved in grams per 100g, so if the user records `100 grams` of chicken breast which has `0g carbs, 3.5g fat and 29.5g protein`, the user have consumed `149.5 kcal` because `1g of carb = 4 kcal` , `1g of fat = 9 kcal`, `1g of protein = 4 kcal` and `0 + 31.5 + 118 = 149.5`.
 
 - A kCal is 1000 of the "scientific" calories. So when you consume something that says 100 calories, it is really 100,000 calories or 100kcal. For the purposes of tracking they are the same it is just a shortcut used instead of saying Kcal for everything.
 
