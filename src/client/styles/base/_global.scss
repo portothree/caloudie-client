@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fffffe;
+}
+
+body,
+input,
+button {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+}
+
+app-root {
+	display: block;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 20px 50px;
+}
+
+.screen-reader-only {
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}

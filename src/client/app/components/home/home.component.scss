@@ -1,0 +1,68 @@
+@import '../../../styles/abstracts/mixins';
+
+.home {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+
+	color: #5f6c7b;
+
+	@include viewport-7 {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 450px;
+
+		@include viewport-7 {
+			align-items: initial;
+			text-align: initial;
+		}
+	}
+
+	&__slogan {
+		font-size: 34px;
+		margin: 0;
+	}
+
+	&__desc {
+		font-size: 22px;
+	}
+
+	&__cite {
+		font-size: 18px;
+	}
+
+	&__cta-link {
+		border-radius: 4px;
+		background-color: #3da9fc;
+		color: #fffffe;
+
+		font-size: 18px;
+		text-decoration: none;
+		text-align: center;
+
+		width: 180px;
+		height: 45px;
+
+		margin-top: 30px;
+		padding: 12px;
+
+		cursor: pointer;
+	}
+
+	&__food-icon {
+		width: 150px;
+		margin-bottom: 20px;
+
+		@include viewport-7 {
+			width: 350px;
+			margin: 0;
+		}
+	}
+}
