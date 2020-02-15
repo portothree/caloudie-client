@@ -1,8 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const path = require('path');
 
 const apiRoutes = require('./routes/api');
+
+const devMode = process.env.NODE_ENV === 'development';
 
 class App {
 	constructor() {
@@ -22,6 +25,14 @@ class App {
 	}
 
 	middlewares() {
+		if (devMode) {
+			this.server.use(
+				cors({
+					origin: 'http://localhost:4200',
+				})
+			);
+		}
+
 		this.server.use(express.json());
 		this.server.use(express.static('dist'));
 	}

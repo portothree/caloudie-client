@@ -26,8 +26,12 @@
 	}
 
 	&__slogan {
-		font-size: 34px;
+		font-size: 26px;
 		margin: 0;
+
+		@include viewport-7 {
+			font-size: 34px;
+		}
 	}
 
 	&__desc {
