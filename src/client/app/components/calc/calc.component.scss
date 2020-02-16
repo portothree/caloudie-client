@@ -1,0 +1,45 @@
+@import '../../../styles/abstracts/mixins';
+
+.calc {
+	display: flex;
+	justify-content: center;
+	font-size: 22px;
+	font-weight: bold;
+	color: #3da9fc;
+	width: 100%;
+	padding: 10px;
+	margin-top: 0;
+
+	@include viewport-4 {
+		padding: 20px;
+	}
+
+	@include viewport-7 {
+		font-size: 32px;
+		padding: 20px 50px;
+	}
+
+	&__piece {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		i {
+			font-size: 12px;
+			color: #5f6c7b;
+			font-weight: normal;
+
+			@include viewport-7 {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__sign {
+		margin: 0 20px;
+
+		@include viewport-4 {
+			margin: 0 30px;
+		}
+	}
+}
