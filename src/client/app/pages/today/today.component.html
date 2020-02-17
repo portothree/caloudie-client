@@ -1,18 +1,15 @@
 <main class="today">
 	<app-calc [goalKcal]="2000" [consumedKcal]="165"></app-calc>
 
-	<div class="meal">
-		<div class="meal__top">
-			<span class="meal__title">Lunch</span>
-		</div>
-		<ul class="meal__food-list">
-			<li class="meal__food">
-				<span>Chicken Breast <span>100g</span></span>
-				<span>165 kcal</span>
-			</li>
-		</ul>
-		<button class="meal__add-food">+ food</button>
-	</div>
+	<p class="today__norec" *ngIf="meals.length <= 0; else mealContainer">
+		No records found for today.
+	</p>
 
-	<button class="today__add-meal">Add meal</button>
+	<ng-template #mealContainer>
+		<ng-container *ngFor="let meal of meals">
+			<app-meal [title]="meal.title"></app-meal>
+		</ng-container>
+	</ng-template>
+
+	<button class="today__add-meal" (click)="addMeal()">Add meal</button>
 </main>

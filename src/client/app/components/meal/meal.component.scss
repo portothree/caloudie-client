@@ -1,0 +1,45 @@
+@import '../../../styles/abstracts/mixins';
+
+:host {
+	width: 100%;
+}
+
+.meal {
+	margin-bottom: 30px;
+	border: 2px solid #d8eefe;
+
+	&__top {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 50px;
+		background-color: #3da9fc;
+		border-radius: 4px 4px 0 0;
+	}
+
+	&__title {
+		font-size: 18px;
+		color: #fffffe;
+		padding: 10px;
+	}
+
+	&__food-list {
+		list-style: none;
+		padding: 10px;
+	}
+
+	&__food {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__add-food {
+		border: none;
+		cursor: pointer;
+		width: 100%;
+		height: 35px;
+		background-color: #d8eefe;
+		color: #5f6c7b;
+		border-radius: 0 0 4px 4px;
+	}
+}

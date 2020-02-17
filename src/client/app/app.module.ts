@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FoodComponent } from './components/food/food.component';
 import { TodayComponent } from './pages/today/today.component';
 import { CalcComponent } from './components/calc/calc.component';
+import { MealComponent } from './components/meal/meal.component';
 
 @NgModule({
 	declarations: [
@@ -21,6 +22,7 @@ import { CalcComponent } from './components/calc/calc.component';
 		FoodComponent,
 		TodayComponent,
 		CalcComponent,
+		MealComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule, HttpClientModule],
 	providers: [FoodService],
