@@ -6,12 +6,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./today.component.scss'],
 })
 export class TodayComponent implements OnInit {
-	meals: Array<object> = [
-		{
-			id: 1,
-			title: 'Meal',
-		},
-	];
+	meals: Array<object> = [];
 
 	addMeal() {
 		const newId: number = this.meals.length + 1;
@@ -21,9 +16,13 @@ export class TodayComponent implements OnInit {
 		};
 
 		this.meals.push(newMeal);
+		localStorage.setItem('meals', JSON.stringify(this.meals));
 	}
 
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		const mealsData = JSON.parse(localStorage.getItem('meals'));
+		this.meals.push(...mealsData);
+	}
 }

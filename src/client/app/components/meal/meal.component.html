@@ -1,6 +1,10 @@
 <div class="meal">
 	<div class="meal__top">
 		<span class="meal__title">{{ title }}</span>
+
+		<button (click)="removeMeal(id)" class="meal__remove" aria-label="Remove">
+			Remove
+		</button>
 	</div>
 	<ul class="meal__food-list">
 		<li class="meal__food">
