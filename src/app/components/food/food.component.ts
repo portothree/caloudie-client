@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { FoodService } from '../../services/food.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { FoodService } from '../../services/food.service';
 	styleUrls: ['./food.component.scss'],
 })
 export class FoodComponent implements OnInit {
-	foods;
+	foods: Observable<object>;
 
 	constructor(private foodService: FoodService) {}
 
